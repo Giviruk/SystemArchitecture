@@ -59,10 +59,10 @@ namespace SystemArchitecture
                 app.UseCors(builder =>
                     builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SystemArchitecture v1"));
             }
-
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SystemArchitecture v1"));
+            
             app.UseHttpsRedirection();
 
             app.UseRouting();
