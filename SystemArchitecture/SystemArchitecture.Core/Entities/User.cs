@@ -15,7 +15,7 @@ namespace SystemArchitecture.Core.Entities
         
         public Genders Gender { get; protected set; }
         
-        public string ImageUrl { get; set; }
+        public Image Image { get; set; }
         
         
         public List<Competence> Competences { get; set; }
@@ -24,22 +24,12 @@ namespace SystemArchitecture.Core.Entities
         {
         }
 
-        public User(string email, int age, Genders gender, string phoneNumber, string imageUrl)
+        public User(string email, int age, Genders gender, string phoneNumber, Image image, List<Competence> competences)
         {
             Age = age;
             Gender = gender;
-            ImageUrl = imageUrl;
-            Email = email;
-            UserName = email.Split("@").FirstOrDefault();
-            NormalizedUserName = UserName.Normalize();
-            PhoneNumber = phoneNumber;
-        }
-        
-        public User(string email, int age, Genders gender, string phoneNumber, string imageUrl, List<Competence> competences)
-        {
-            Age = age;
-            Gender = gender;
-            ImageUrl = imageUrl;
+            Image = image;
+            
             Competences = competences;
             Email = email;
             UserName = email.Split("@").FirstOrDefault();

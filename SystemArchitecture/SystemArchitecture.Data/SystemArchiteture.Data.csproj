@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
-        <RootNamespace>SystemArchiteture.Data</RootNamespace>
+        <RootNamespace>SystemArchitecture.Data</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

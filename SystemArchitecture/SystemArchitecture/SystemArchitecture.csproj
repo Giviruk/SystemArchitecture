@@ -18,6 +18,7 @@
     <ItemGroup>
       <ProjectReference Include="..\SystemArchitecture.Core.Features\SystemArchitecture.Core.Features.csproj" />
       <ProjectReference Include="..\SystemArchitecture.Core\SystemArchitecture.Core.csproj" />
+      <ProjectReference Include="..\SystemArchitecture.Data\SystemArchiteture.Data.csproj" />
       <ProjectReference Include="..\SystemArchiteture.Data\SystemArchiteture.Data.csproj" />
     </ItemGroup>
 

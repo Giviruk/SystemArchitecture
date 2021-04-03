@@ -245,8 +245,8 @@ namespace SystemArchiteture.Data.Migrations
                     b.Property<int>("Gender")
                         .HasColumnType("integer");
 
-                    b.Property<string>("ImageUrl")
-                        .HasColumnType("text");
+                    b.Property<int?>("ImageId")
+                        .HasColumnType("integer");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("boolean");
@@ -282,6 +282,8 @@ namespace SystemArchiteture.Data.Migrations
                         .HasColumnType("character varying(256)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ImageId");
 
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
@@ -364,6 +366,15 @@ namespace SystemArchiteture.Data.Migrations
                     b.Navigation("Student");
 
                     b.Navigation("Teacher");
+                });
+
+            modelBuilder.Entity("SystemArchitecture.Core.Entities.User", b =>
+                {
+                    b.HasOne("SystemArchitecture.Core.Entities.Image", "Image")
+                        .WithMany()
+                        .HasForeignKey("ImageId");
+
+                    b.Navigation("Image");
                 });
 
             modelBuilder.Entity("SystemArchitecture.Core.Entities.User", b =>
