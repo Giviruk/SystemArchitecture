@@ -42,6 +42,8 @@ namespace SystemArchitecture
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "SystemArchitecture", Version = "v1"});
             });
+            
+            services.AddAutoMapper(mc => { mc.AddMaps(typeof(AuthController).Assembly); });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

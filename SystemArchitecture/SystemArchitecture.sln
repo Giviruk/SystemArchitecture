@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemArchitecture.Core", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemArchitecture.Core.Features", "SystemArchitecture.Core.Features\SystemArchitecture.Core.Features.csproj", "{CA1A95A0-D766-49CC-999F-4D063D14D3B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemArchiteture.Data", "SystemArchitecture.Data\SystemArchiteture.Data.csproj", "{455D0323-E927-4976-A87E-D40C713CC2AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemArchitecture.Data", "SystemArchitecture.Data\SystemArchitecture.Data.csproj", "{455D0323-E927-4976-A87E-D40C713CC2AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

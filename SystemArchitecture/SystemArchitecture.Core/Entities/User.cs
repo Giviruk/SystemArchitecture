@@ -16,24 +16,32 @@ namespace SystemArchitecture.Core.Entities
         public Genders Gender { get; protected set; }
         
         public Image Image { get; set; }
-        
-        
+
         public List<Competence> Competences { get; set; }
 
         protected User()
         {
         }
 
-        public User(string email, int age, Genders gender, string phoneNumber, Image image, List<Competence> competences)
+        public User(string email, int age, Genders gender, string phoneNumber, List<Competence> competences,string aboutMe, string userName)
         {
             Age = age;
             Gender = gender;
-            Image = image;
+            AboutMe = aboutMe;
             
             Competences = competences;
             Email = email;
-            UserName = email.Split("@").FirstOrDefault();
+            UserName = userName;
             NormalizedUserName = UserName.Normalize();
+            PhoneNumber = phoneNumber;
+        }
+        
+        public User(string email, string phoneNumber, Genders gender,int age)
+        {
+            Age = age;
+            Gender = gender;
+            Email = email;
+            UserName = UserName;
             PhoneNumber = phoneNumber;
         }
     }

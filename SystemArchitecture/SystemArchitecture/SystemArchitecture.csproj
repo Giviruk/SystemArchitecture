@@ -5,6 +5,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="10.1.1" />
         <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.4" />
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.4" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.4">
@@ -18,8 +19,8 @@
     <ItemGroup>
       <ProjectReference Include="..\SystemArchitecture.Core.Features\SystemArchitecture.Core.Features.csproj" />
       <ProjectReference Include="..\SystemArchitecture.Core\SystemArchitecture.Core.csproj" />
-      <ProjectReference Include="..\SystemArchitecture.Data\SystemArchiteture.Data.csproj" />
-      <ProjectReference Include="..\SystemArchiteture.Data\SystemArchiteture.Data.csproj" />
+      <ProjectReference Include="..\SystemArchitecture.Data\SystemArchitecture.Data.csproj" />
+      <ProjectReference Include="..\SystemArchitecture.Data\SystemArchitecture.Data.csproj" />
     </ItemGroup>
 
 </Project>
