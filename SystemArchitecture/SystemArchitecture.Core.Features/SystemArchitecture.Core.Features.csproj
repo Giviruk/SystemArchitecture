@@ -8,4 +8,11 @@
       <ProjectReference Include="..\SystemArchitecture.Core\SystemArchitecture.Core.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Fetures\Filter" />
+      <Folder Include="Fetures\Search" />
+      <Folder Include="Fetures\StudentProfile" />
+      <Folder Include="Fetures\Timetable" />
+    </ItemGroup>
+
 </Project>
