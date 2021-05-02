@@ -14,9 +14,6 @@ namespace SystemArchitecture.Core.Features.Fetures.Lesson
             
         }
         
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status429TooManyRequests)]
-        [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)]
         [HttpGet]
         public IActionResult GetLesson(LessonDto lesson)
         {
@@ -26,14 +23,17 @@ namespace SystemArchitecture.Core.Features.Fetures.Lesson
             return Ok(lesson);
         }
         
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status429TooManyRequests)]
-        [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)]
         [HttpPost]
         public IActionResult CreateLesson(User teacher, User student, LessonDto dto)
         {
             var lesson = new Entities.Lesson(teacher, student, dto.StartDate, dto.EndDate, dto.Title);
             return Ok(lesson);
+        }
+
+        [HttpPost]
+        public IActionResult EditLesson()
+        {
+            return Ok("Ok");
         }
     }
 }

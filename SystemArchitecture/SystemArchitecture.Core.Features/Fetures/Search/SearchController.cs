@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using SystemArchitecture.Core.Base;
 using SystemArchitecture.Core.Entities;
+using SystemArchitecture.Core.Features.Fetures.Search.Queries;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace SystemArchitecture.Core.Features.Fetures.Search
@@ -11,10 +13,11 @@ namespace SystemArchitecture.Core.Features.Fetures.Search
         {
             
         }
-
+        
         [HttpGet]
-        public IActionResult GetTeachers(string requiredCompetence, User[] teachers)
+        public IActionResult GetTeachers(string requiredCompetence, [FromQuery] SearchQuery query)
         {
+            List<User> teachers = query.Teachers;
             List<User> suitableTeachers = new List<User>();
             
             foreach (var teacher in teachers)

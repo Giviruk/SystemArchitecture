@@ -8,8 +8,4 @@
       <ProjectReference Include="..\SystemArchitecture.Core\SystemArchitecture.Core.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Fetures\Timetable" />
-    </ItemGroup>
-
 </Project>
