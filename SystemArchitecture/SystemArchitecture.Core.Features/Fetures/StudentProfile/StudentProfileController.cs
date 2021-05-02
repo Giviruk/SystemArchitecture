@@ -3,26 +3,25 @@ using SystemArchitecture.Core.Dto;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace SystemArchitecture.Core.Features.Fetures.TeacherProfile
+namespace SystemArchitecture.Core.Features.Fetures.StudentProfile
 {
-    public class TeacherProfileController : ApiControllerBase
+    public class StudentProfileController : ApiControllerBase
     {
-        public TeacherProfileController()
+        public StudentProfileController()
         {
             
         }
-
+        
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ValidationProblemDetails), StatusCodes.Status429TooManyRequests)]
         [ProducesResponseType(StatusCodes.Status503ServiceUnavailable)]
         [HttpGet]
-        public IActionResult Get(TeacherDto teacher)
+        public IActionResult Get(StudentDto student)
         {
-            teacher.UserName = "John Green";
-            teacher.Age = 32;
-            teacher.Email = "john.green@gmail.com";
-            teacher.Competence = "Math"; 
-            return Ok(teacher);
+            student.UserName = "Jake Woods";
+            student.Age = 19;
+            student.Email = "jake.woods@gmail.com";
+            return Ok(student);
         }
     }
 }
